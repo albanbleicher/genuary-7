@@ -3,21 +3,64 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"npm run dev:css\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --format=pretty .",
+    "mrm": "mrm --preset=@albanbl/mrm-preset",
+    "dev:css": "unocss -c uno.config.ts -o styles/uno.css -w {pages,components}/**/**/* {pages,components}/**/* {pages,components}/* layouts/*",
+    "build:css": "unocss -c uno.config.ts -o styles/uno.css {pages,components}/**/**/* {pages,components}/**/* {pages,components}/* layouts/*",
+    "lint:fix": "eslint --fix --format=pretty .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@react-three/drei": "^9.51.15",
+    "@react-three/fiber": "^8.10.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
-    "eslint": "8.31.0",
+    "@types/three": "^0.148.0",
+    "axios": "^1.2.2",
+    "drei": "^2.2.21",
     "eslint-config-next": "13.1.1",
+    "framer-motion": "^8.2.4",
     "next": "13.1.1",
     "react": "18.2.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
+    "react-three-fiber": "^6.0.13",
+    "swr": "^2.0.0",
+    "three": "^0.148.0",
+    "tinykeys": "^1.4.0",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@albanbl/eslint-config": "^2.0.2",
+    "@albanbl/mrm-preset": "^1.0.2",
+    "@iconify-json/carbon": "^1.1.13",
+    "@unocss/cli": "^0.48.2",
+    "@unocss/preset-icons": "^0.48.2",
+    "concurrently": "^7.6.0",
+    "eslint": "8.31.0",
+    "mrm": "^4.1.13",
+    "prettier": "^2.8.2",
+    "unocss": "^0.48.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@albanbl",
+      "eslint-config"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
   }
 }
