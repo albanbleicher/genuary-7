@@ -1,20 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import Search from '../components/Search'
 import Cover from '../components/Cover'
 import { isDesktop, isMacOs, isMobile, isTablet } from 'react-device-detect'
-import localFont from '@next/font/local'
 import { useContext, useEffect, useState } from 'react'
 import GlobalContext from '../contexts/global'
-export const satoshiFont = localFont({
-  src: [
-    {
-      path: '../assets/fonts/Satoshi-Variable.ttf',
-    },
-  ],
-  variable: '--satoshi-font',
-})
 export default function Home() {
   const [key, setKey] = useState('')
   const [message, setMessage] = useState('')
@@ -64,9 +53,7 @@ export default function Home() {
         />
         <title>Genuary 7, 2023 - Alban Bleicher</title>
       </Head>
-      <main
-        className={`bg-[#0A0908] text-white overflow-hidden h-full font-sans ${satoshiFont.className}`}
-      >
+      <main className={`bg-[#0A0908] text-white overflow-hidden h-full font-sans `}>
         <div className="flex flex-col justify-center items-center w-full h-full space-y-5 text-center">
           <span onClick={handleClick} className="text-white/30 text-xs text-center">
             {message}

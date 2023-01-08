@@ -9,7 +9,7 @@ export default defineConfig({
     presetWebFonts({
       provider: 'bunny',
       fonts: {
-        sans: 'var(--satoshi-font)',
+        sans: 'Poppins',
       },
     }),
     presetIcons({

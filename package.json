@@ -14,7 +14,6 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@next/font": "13.1.1",
     "@react-three/drei": "^9.51.15",
     "@react-three/fiber": "^8.10.0",
     "@types/node": "18.11.18",
@@ -22,14 +21,12 @@
     "@types/react-dom": "18.0.10",
     "@types/three": "^0.148.0",
     "axios": "^1.2.2",
-    "drei": "^2.2.21",
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.2.4",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
-    "react-three-fiber": "^6.0.13",
     "swr": "^2.0.0",
     "three": "^0.148.0",
     "tinykeys": "^1.4.0",
