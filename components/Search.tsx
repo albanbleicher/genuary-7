@@ -5,7 +5,6 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import tinykeys from 'tinykeys'
 import GlobalContext from '../contexts/global'
-import { satoshiFont } from '../pages'
 
 //@ts-ignore
 const fetcher = (...args: any) => fetch(...args).then((res) => res.json())
@@ -87,7 +86,7 @@ export default function Search() {
                 ref={field}
                 tabIndex={0}
                 placeholder="Search an artist or an album"
-                className={`font-sans bg-dark-800 w-full border-none focus:outline-none px-6 py-4 outline-none appearance-none text-white text-lg box-border ${satoshiFont.className}`}
+                className={`font-sans bg-dark-800 w-full border-none focus:outline-none px-6 py-4 outline-none appearance-none text-white text-lg box-border `}
                 type="text"
                 onInput={(e) => handleSearch(e.currentTarget.value)}
                 onBlur={() => dispatch({ type: 'set-search', payload: false })}
