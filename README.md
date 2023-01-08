@@ -1,4 +1,4 @@
-# genuary-7-app 🌈
+# Genuary 7 🌈
 
 ## Setup 🌱
 
