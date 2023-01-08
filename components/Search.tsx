@@ -35,7 +35,7 @@ export default function Search() {
       '$mod+KeyK': (e) => {
         e.preventDefault()
         dispatch({ type: 'set-search', payload: true })
-        setTimeout(() => field?.current?.focus(), 500)
+        setTimeout(() => field?.current?.focus(), 200)
       },
       'Escape': () => {
         dispatch({ type: 'set-search', payload: false })
