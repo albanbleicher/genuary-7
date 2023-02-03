@@ -48,7 +48,7 @@ export default function Cover() {
       >
         <CoverMesh height={window.width <= 768 ? 8 : 4} z={window.width <= 768 ? 0 : 2.5} />
       </Canvas>
-      <Link className="block decoration-none" href={cover.link as string}>
+      <Link className="block decoration-none relative xl:top-4" href={cover.link as string}>
         <span className="text-center text-white">
           {cover.label} - {cover.artist}
         </span>

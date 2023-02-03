@@ -58,7 +58,7 @@ void main() {
     float scale=1.0;
     vec2 grain = vUv;
     float nn = snoise(vec2(vUv*scale)+snoise(vUv*0.5)+uTime*0.01);
-    grain+=(vec2(random(vUv)*random(vUv*uTime))*0.1);
+    grain+=(vec2(random(vUv)*random(vUv*uTime))*0.05);
     grain.x =vUv.x/nn/(400.0*0.01);
     vec4 color = texture2D(uTexture, grain);
     gl_FragColor = color;

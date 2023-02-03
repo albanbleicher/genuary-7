@@ -54,12 +54,12 @@ export default function Home() {
         <title>Genuary 7, 2023 - Alban Bleicher</title>
       </Head>
       <main className={`bg-[#0A0908] text-white overflow-hidden h-full font-sans `}>
-        <div className="flex flex-col justify-center items-center w-full h-full space-y-5 text-center">
-          <span onClick={handleClick} className="text-white/30 text-xs text-center">
+        <div className="flex flex-col justify-center items-center w-full h-full space-y-5 text-center xl:space-y-10">
+          <span onClick={handleClick} className="text-white/30 text-xs xl:text-base text-center">
             {message}
           </span>
           <Cover />
-          <div className="flex flex-col justify-center items-center text-white/30 text-xs">
+          <div className="flex flex-col justify-center items-center text-white/30 text-xs xl:text-base">
             <span>Genuary 7, 2023</span>
             <span>"Sample a color palette from your favorite movie/album cover"</span>
           </div>
