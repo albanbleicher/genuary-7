@@ -11,6 +11,8 @@
     "dev:css": "unocss -c uno.config.ts -o styles/uno.css -w {pages,components}/**/**/* {pages,components}/**/* {pages,components}/* layouts/*",
     "build:css": "unocss -c uno.config.ts -o styles/uno.css {pages,components}/**/**/* {pages,components}/**/* {pages,components}/* layouts/*",
     "lint:fix": "eslint --fix --format=pretty .",
+    "docker:build": "docker build -t genuary-7 .",
+    "docker:run": "docker run -p 3000:3000 genuary-7",
     "format": "prettier --write ."
   },
   "dependencies": {

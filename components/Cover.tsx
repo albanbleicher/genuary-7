@@ -6,6 +6,7 @@ import { shaderMaterial, useTexture } from '@react-three/drei'
 import { NoToneMapping, Texture } from 'three'
 import { useAnimationFrame } from 'framer-motion'
 import Link from 'next/link'
+const clampRAFTo60FPS = (callback:any) => (timestamp:number) => (performance.now() - (timestamp || performance.now()) >= 1000 / 60 ? callback(timestamp) : requestAnimationFrame(clampRAFTo60FPS(callback)));
 
 export default function Cover() {
   const {
@@ -28,7 +29,7 @@ export default function Cover() {
       vertex,
       frag
     )
-    useAnimationFrame((timestamp) => setTime(time + 1))
+    useAnimationFrame(clampRAFTo60FPS((timestamp:any) => setTime(time + .5)))
     extend({ GenMaterial })
     return (
       <mesh position={[0, 0, z]}>
